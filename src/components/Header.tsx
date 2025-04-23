@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ShoppingBag, Phone } from 'lucide-react';
+import { ChevronRight } from 'lucide-react'; // Import the icon
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,10 +68,14 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a href="tel:+1800123456" className="flex items-center space-x-2 text-sm font-medium text-gray-700">
               <Phone className="h-4 w-4" />
-              <span>24/7 Support: 1-800-123-456</span>
+              <span>24/7 Support</span>
             </a>
             <a href="#contact" className="btn btn-primary">
               Get Started
+            </a>
+            <a href="https://3adf-122-165-121-116.ngrok-free.app/" className="btn btn-primary" target='_blank' rel="noopener noreferrer">  
+              <span>Login</span>
+              <ChevronRight className="h-4 w-4" />
             </a>
           </div>
 
@@ -104,7 +109,7 @@ const Header = () => {
               <div className="pt-4 border-t border-gray-200">
                 <a href="tel:+1800123456" className="flex items-center space-x-2 text-sm font-medium text-gray-700 mb-4">
                   <Phone className="h-4 w-4" />
-                  <span>24/7 Support: 1-800-123-456</span>
+                  <span>24/7 Support</span>
                 </a>
                 <a href="#contact" className="btn btn-primary w-full text-center" onClick={() => setIsMenuOpen(false)}>
                   Get Started
